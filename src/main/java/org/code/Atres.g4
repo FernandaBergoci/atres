@@ -1,7 +1,3 @@
-//Alexandre Nascimento Caminha RA: 125111370334
-//Fernanda Beatriz Leme Bergoci RA: 125111367122
-//Gabriel Cardoso Martins RA: 125111135823
-//Karina de Oliveira Matiolli RA: 125111355232
 
 grammar Atres;
 
@@ -12,8 +8,7 @@ programa: PROGRAMA ID AB_CHAVE
 
 declaracao: var_decl | var_atrib;
 
-var_decl:
-		TIPO ID  PV;
+var_decl: TIPO 	ID  PV;
 
 var_atrib:
 		 (TIPO)? ID OP_ATRIB (variavel|exprMat) PV;
