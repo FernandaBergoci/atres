@@ -6,8 +6,13 @@ programa calculaDesconto{
     racional totalComDesconto;
 
 
-    valorItem = entrada;
-    while(a>b){
-        b
-    }
+    se(contaItens ==1){
+
+        }senao se(contaItens ==2){
+            totalComDesconto = 0.9*valorTotalItens;
+
+        }senao {
+            totalComDesconto = 0.8*valorTotalItens;
+
+        }
  }

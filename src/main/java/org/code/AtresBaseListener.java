@@ -85,7 +85,10 @@ public class AtresBaseListener implements AtresListener {
 
 	@Override public void exitVar_atrib(AtresParser.Var_atribContext ctx) { }
 	@Override public void enterComando(AtresParser.ComandoContext ctx) {
-
+//		if(ctx.cmdEntrada() != null) ctx.cmdEntrada();
+//		if(ctx.cmdSaida() != null) ctx.cmdSaida();
+//		if(ctx.cmdCondicao() != null) ctx.cmdCondicao();
+//		if(ctx.cmdRept() != null) ctx.cmdRept();
 	}
 	@Override public void exitComando(AtresParser.ComandoContext ctx) { }
 	@Override public void enterCmdEntrada(AtresParser.CmdEntradaContext ctx) {
@@ -98,7 +101,21 @@ public class AtresBaseListener implements AtresListener {
 	}
 	@Override public void exitCmdSaida(AtresParser.CmdSaidaContext ctx) { }
 	@Override public void enterCmdCondicao(AtresParser.CmdCondicaoContext ctx) {
-
+			if(ctx.SE() != null) {
+				do {
+					codigo += "if(" + ctx.comparacao() + "){" + ctx.comando() + "}\n";
+				} while (ctx.comando() == null);
+			}
+			if(ctx.SENAO() != null && ctx.SE() != null){
+				do {
+				codigo += "else if(" + ctx.comparacao() + "){" + ctx.comando() + "}\n";
+				} while (ctx.comando() == null);
+			}
+			if(ctx.SENAO() != null){
+				do{
+					codigo += "else{" + ctx.comando() + "}\n";
+				} while (ctx.comando() == null);
+			}
 	}
 	@Override public void exitCmdCondicao(AtresParser.CmdCondicaoContext ctx) { }
 	@Override public void enterComparacao(AtresParser.ComparacaoContext ctx) {
