@@ -11,7 +11,7 @@ import java.io.File;
 public class Atres {
     public static void main(String[] args) throws Exception {
 
-        File arquivo = new File("C:\\Users\\nandi\\Desktop\\compilador\\atres\\src\\main\\java\\org\\code\\codigo");
+        File arquivo = new File("C:\\Users\\nandi\\Desktop\\barto\\atres\\src\\main\\java\\org\\code\\codigo");
         CharStream entrada = CharStreams.fromFileName(arquivo.getAbsolutePath());
         AtresLexer anaLexer = new AtresLexer(entrada);
         CommonTokenStream tokens = new CommonTokenStream(anaLexer);

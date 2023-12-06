@@ -5,23 +5,9 @@ programa calculaDesconto{
     inteiro valorTotalItens = 0;
     racional totalComDesconto;
 
-    while(resp == true){
-        escreva("Proximo produto");
-        valorItem = entrada;
-        valorTotalItens = valorTotalItens + valorItem;
-        contaItens++;
 
-        escreva("Deseja registrar mais produtos?");
-        resp = entrada;
-    }
-
-    se(contaItens ==1){
-        escreva("Valor a pagar: "+ valorTotalItens);
-    }senao se(contaItens ==2){
-        totalComDesconto = 0.9*valorTotalItens;
-        escreva("Valor a pagar: "+ totalComDesconto);
-    }senao {
-        totalComDesconto = 0.8*valorTotalItens;
-        escreva("Valor a pagar: "+ totalComDesconto);
+    valorItem = entrada;
+    while(a>b){
+        b
     }
  }
